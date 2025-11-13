@@ -1,9 +1,8 @@
 # Ex.05 Design a Website for Server Side Processing
-## Date:9/10/2025
+## Date:09/10/2025
 
 ## AIM:
- To design a website to calculate the Body Mass Index(BMI) in the server side. 
-
+ To design a website to calculate the BODY MASS INDEX (BMI) in the server side. 
 
 ## FORMULA:
 BMI = W/H<sup>2</sup>
@@ -33,17 +32,19 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
-mathapp
+math.html
+
+
 <html>
     <head>
         <title>BMI Calculator</title>
         <style>
         body{
-          background-color: green;
+          background-color: rgb(39, 39, 92);
           border-top: 20;
         }
         .m{
-          background-color: red;
+          background-color: rgb(197, 132, 86);
           border-style: dotted;
           margin-top: 150px;
           margin-left: 500px;
@@ -53,7 +54,7 @@ mathapp
             .main{
                 font-size: 250%;
                 text-align: center;
-                background-color: red;
+                background-color: rgb(197, 132, 86)l;
                  margin-left: 50px;
                   margin-right: 50px;
                   padding: 50px;
@@ -63,7 +64,7 @@ mathapp
             .a{
                 font-size: 150%;
                 text-align: center;
-                background-color: red;
+                background-color:  rgb(197, 132, 86);
                  margin-left: 50px;
                   margin-right: 50px;
                 
@@ -71,20 +72,20 @@ mathapp
             }
             form{
               text-align: center;
-              background-color: red;
+              background-color: rgb(197, 132, 86);
                margin-left: 50px;
              margin-right: 50px;
              padding: 50px;
             }
            
         </style>
-    </head>
+    </head> 
     <body>
 
        <div class="m">
         <div class="main">BMI Calculator</div>
         <div class="a">
-         Srimathi.S(25017525)</div>
+         SANJAY A(25016505)</div>
         <form method="post">
           {% csrf_token %}
            
@@ -100,8 +101,9 @@ mathapp
         </form>
         
         
-    </body>
+    </body>
 </html>
+
 views.py
 from django.shortcuts import render
 def calculate_bmi(request):
@@ -121,11 +123,12 @@ def calculate_bmi(request):
        context['w']=w
        context['h']=h
        print('BMI=',bmi)
-    return render(request,'mathapp/math.html',context)
+    return render(request,'ownapp/math.html',context)
+
 urls.py
 from django.contrib import admin
 from django.urls import path
-from mathapp import views
+from ownapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -134,11 +137,14 @@ urlpatterns = [
 ]
 ```
 
+
 ## SERVER SIDE PROCESSING:
-![alt text](<Screenshot (34).png>)
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5687adc0-200c-49fd-bb33-a63ea32ac1c7" />
+
 
 ## HOMEPAGE:
-![alt text](<Screenshot 2025-10-09 155712.png>)
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/7ab59a22-b466-4c56-ba4d-6b91b9f7714c" />
+
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
